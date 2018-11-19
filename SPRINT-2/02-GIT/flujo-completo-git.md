@@ -10,12 +10,12 @@
 ![Information new repository](images/information-new-repository.png "Information for new repository")
 7. Ahora nos reidreccionara a la pantalla donde ya se creo nuestro nuevo repositorio.
 8. Buscamos el boton que dice "Clone o download" y copiamos la ruta que nos da.
-![New repository](images/new-repository)
+![New repository](images/new-repository.png)
 9. Nos vamos a nuestro equipo local y abrimos una terminal nos movemos al directorio donde queremos clonar el proyecto, y escribimos el comando "git clone" seguido de la url que copiamos del repositorio de github, esto nos crea una copia local de nuestro repositorio de git.
 10. Sabemos que ya estamos en nuestro repositorio local porque en el pront de la terminal nos coloca el nombre del directorio de trabajo y la rama donde estamos por default nos crea una rama llamada master.
 ![Git clone](images/clone-repository.png)
 11. La rama master no la vamos a modificar ya que esta la utilizaremos cuando lanzemos una realease del proyecto, entonces para comenzar a trabajar debemos de crear otra rama a la cual llamaremos develop (Este nombre es por buenas practicas aunque podemos darle el nombre que queramos) para crear otra rama utilizamos el comando "git branch" seguido del nombre de la rama.
-![New branch](/images/create-new-branch.png)
+![New branch](images/create-new-branch.png)
 12. Usamos el comando "git branch" para listar las ramas que tememos en nuestro repositorio y le coloca un asterisco para marcar la rama actual en la que estamos trabajando.
 ![List branch](images/list-branch.png)
 13. Nos cambiamos de rama con el comando "git checkout" seguido del nombre de la rama a la cual nos queremos cambiar.
