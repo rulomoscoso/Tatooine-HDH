@@ -94,7 +94,7 @@ ul.menu ul > li a:hover{
 }
 .main footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 15% 1fr 15%;
     grid-template-rows: repeat(2, 2fr) 1fr;
 }
 .social{
@@ -127,6 +127,27 @@ ul.menu ul > li a:hover{
 }
 .video img{
   width: 100%;
+}
+.about article > h2{
+  text-align: center;
+}
+.about article > p{
+  text-align: justify;
+}
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+}
+input[type=submit]{
+  background: #EE7942;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  float: right;
+  resize: none;
 }
 @media screen and (min-width: 500px) {
   .main header{
