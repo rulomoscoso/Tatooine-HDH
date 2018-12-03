@@ -1,31 +1,25 @@
 *{
   box-sizing: border-box;
 }
-  .main {
-      max-width: 1024px;
-      margin: 0 auto;
-      font: 1.2em Helvetica, arial, sans-serif;
-  }
-  .main > * {
-      border: 2px solid #f08c00;
-      background-color: #ffec99;
-      border-radius: 5px;
-      padding: 10px;
-  }
-
-  nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-  }
-.main{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 20px;
+.main {
+    max-width: 1024px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
 }
-
-.main > *{
-  grid-column: 1 / span 12;
+.main > * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+    padding: 10px;
+    grid-column: 1 / span 12;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .main header{
   /*display: grid;
@@ -52,27 +46,17 @@ ul.menu ul > li a:hover{
     margin-bottom: .1em;
 }
 .main aside{
-  grid-row: 2;
+  grid-row: 3;
   display: grid;
-  grid-template-columns: 10% 1fr 10%;
+  grid-template-columns: 1fr;
   justify-items: center;
 }
 .top h2{
-  grid-column: 2;
-  grid-row: 1 / 2;
   text-align: center;
 }
-.top .image-1{
-  grid-column: 2;
-  grid-row: 2 / 3;
-}
-.top .image-2{
-  grid-column: 2;
-  grid-row: 3 / 4;
-}
-.top .image-3{
-  grid-column: 2;
-  grid-row: 4 / 5;
+.image img{
+  width: 100%;
+  object-fit: cover;
 }
 .products{
   display: grid;
@@ -95,7 +79,6 @@ ul.menu ul > li a:hover{
 .main footer {
     display: grid;
     grid-template-columns: 15% 1fr 15%;
-    grid-template-rows: repeat(2, 2fr) 1fr;
 }
 .social{
   grid-column: 2;
@@ -117,6 +100,9 @@ ul.menu ul > li a:hover{
   justify-content: space-around;
   list-style: none;
   align-items: center;
+}
+.nav-footer ul > li{
+  padding: 5px 15px;
 }
 .nav-footer ul > li > a:link, a:visited{
   text-decoration: none;
@@ -149,27 +135,52 @@ input[type=submit]{
   float: right;
   resize: none;
 }
-@media screen and (min-width: 500px) {
-  .main header{
-    /*display: grid;
-    grid-template-columns: 1fr 3fr;*/
+@media only screen and (min-width: 26em){
+  .main footer {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 25% 1fr 25%;
+  }
+  .nav-footer ul {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+  }
+  .main-nav{
+    margin: 15px 0;
+  }
+  .nav-footer ul {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .nav-footer {
+    grid-column: 1/4;
+  }
+  .nav-footer ul > li {
+    padding: 5px 10px;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 53em) {
+  .main header{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /*display: grid;
+    grid-template-columns: 1fr;*/
+    grid-template-rows: 1fr;
   }
   .main header .logo{
     justify-self: center;
   }
   .principal {
     grid-column: 1 / span 8;
-    grid-row: 2;
+    display: grid;
     padding: 20px;
   }
   .main aside{
     grid-column: 9 / span 4;
     grid-row: 2;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 1fr;
     justify-items: center;
   }
   .principal h1{
@@ -178,28 +189,19 @@ input[type=submit]{
   .principal p{
     text-align: justify;
   }
-  .top h2{
-    grid-column: 2;
-    grid-row: 1 / 2;
-    text-align: center;
+  .video{
+    align-self: end;
   }
-  .top .image-1{
-    grid-column: 2;
-    grid-row: 2 / 3;
+  .image{
+    margin-bottom: 10px;
   }
-  .top .image-2{
-    grid-column: 2;
-    grid-row: 3 / 4;
+  .top h2 {
+    grid-column: 1;
   }
-  .top .image-3{
-    grid-column: 2;
-    grid-row: 4 / 5;
+  .top div:nth-child(4) {
+    grid-column: 1;
   }
-  .main footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
+
   .social{
     grid-column: 2;
     grid-row: 1;
@@ -213,25 +215,15 @@ input[type=submit]{
     grid-column: 1 / 4;
     grid-row: 3;
   }
-  .main nav{
-    align-self: center;
-  }
   nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    /*display: flex;
-    justify-content: space-evenly;*/
-  }
-  ul.menu li a{
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    background: #EE7942;
-    padding: 13px 44px;
+    display: flex;
+    justify-content: space-evenly;
   }
   ul.menu ul > li a:hover{
     background: #CD6839;
+  }
+  .main header > nav{
+    align-self: center;
   }
   .social ul {
     margin: 0;
