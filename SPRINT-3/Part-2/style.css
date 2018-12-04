@@ -117,7 +117,7 @@ ul.menu ul > li a:hover{
 .video img{
   width: 100%;
 }
-.about article > h2{
+section.about > h1{
   text-align: center;
 }
 .about article > p{
