@@ -120,6 +120,19 @@ ul.menu ul > li a:hover{
 .about article > p{
   text-align: justify;
 }
+.product-description{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+  grid-gap: 20px 20px;
+}
+.product-description > p{
+  width: 100%;
+  text-align: justify;
+}
+article.product-description img {
+    width: 100%;
+    object-fit: cover;
+}
 input[type=text], input[type=email], textarea {
     width: 100%;
     padding: 12px 20px;
@@ -250,6 +263,16 @@ input[type=submit]{
   .product-item > p{
     width: 300px;
     text-align: justify;
+  }
+  .product-description{
+    grid-template-columns: repeat( auto-fit, minmax(256px, 1fr) );
+  }
+  .product-description > p{
+    grid-column: 1 / 4;
+  }
+  section.contact{
+    display: flex;
+    justify-content: center;
   }
 }
 
